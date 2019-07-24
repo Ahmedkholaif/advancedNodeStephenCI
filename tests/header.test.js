@@ -2,10 +2,10 @@ const Page = require('./helpers/Page');
 
 let page;
 
-beforeEach(async () => {
-    page = await Page.build();
-    await page.goto('http://localhost:3000');
-})
+// beforeEach(async () => {
+//     page = await Page.build();
+//     await page.goto('http://localhost:3000');
+// })
 
 test('the header has the correct text', async () => {
 
@@ -37,9 +37,9 @@ test('When sign in show logout button', async () => {
     expect(text).toEqual('Logout');
 });
 
-afterEach(async () => {
-    await page.close();
-})
+// afterEach(async () => {
+//     await page.close();
+// })
 
 //======================================
 
