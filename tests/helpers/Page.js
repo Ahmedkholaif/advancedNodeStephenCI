@@ -6,10 +6,8 @@ class CustomPage {
     static async build() {
         const browser = await pupp.launch({
             headless:true,
-            args:['--no-sandbox']
-
+            args:['--no-sandbox'],
         });
-
         const page = await browser.newPage();
 
         const customPage = new CustomPage(page)
@@ -17,7 +15,7 @@ class CustomPage {
         return new Proxy(customPage, {
             get: function(target, property){
                 return (customPage[property] ||
-                    browser[property] || page[property] );
+                    browser[property] || page[property] );  
             }
         });
     }
@@ -34,7 +32,7 @@ class CustomPage {
 
         await this.page.goto('http://localhost:3000/blogs')
 
-        await this.page.waitFor("a[href='/auth/logout']")
+        // await this.page.waitFor("a[href='/auth/logout']")
     }
 }
 

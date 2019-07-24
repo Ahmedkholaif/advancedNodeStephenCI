@@ -45,7 +45,7 @@ describe.only('when logged in ', async () => {
     });
 
     test('can see blog create form ', async () => {
-        await page.WaitFor('form label');
+        // await page.WaitFor('form label');
         const label = await page.$eval('form label', el => el.innerHTML);
         expect(label).toEqual('Blog Title');
     });
