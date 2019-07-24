@@ -14,7 +14,7 @@ test('the header has the correct text', async () => {
     expect(text).toEqual('Blogster');
 });
 
-test('hello',()=>{
+test.only('hello',()=>{
     const sum = 2+3;
 
     expect(sum).toEqual(5);
