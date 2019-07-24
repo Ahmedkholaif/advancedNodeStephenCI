@@ -7,11 +7,6 @@ services:
   - redis-server
 env:
   - NODE_ENV=ci
-  - GOOGLE_CLIENT_ID='964808011168-29vqsooppd769hk90kjbjm5gld0glssb.apps.googleusercontent.com'
-  - GOOGLE_CLIENT_SECRET='KnH-rZC23z4fr2CN4ISK4srN'
-  - REDIS_URL='redis://127.0.0.1:6379'
-  - MONGO_URI='mongodb://127.0.0.1:27017/blog_ci'
-  - COOKIE_KEY='123123123'
   - PORT=3000
 cache:
   directories:
