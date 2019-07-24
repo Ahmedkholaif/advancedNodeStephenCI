@@ -7,7 +7,7 @@ beforeEach(async () => {
     await page.goto('http://localhost:3000');
 })
 
-test('the header has the correct text', async () => {
+test.only('the header has the correct text', async () => {
 
     const text = await page.$eval('a.brand-logo', elm => elm.innerHTML);
     console.log(text);
